@@ -90,11 +90,20 @@ Get-Command  | where CommandType -EQ cmdlet | Group-Object status
 #4 Display all aliases
 Get-Alias 
 
-#5
+#5 Make new alias for Notepad - np
+New-Alias np notepad
+np
 
+#6 Display list of services starting with M
+Get-Service m*
 
+#7 Display list of all firewall rules 
+gcm *firewall*
+Show-NetFirewallRule | ft Name
+Get-NetFirewallRule | ft name
 
-
+#8. display list of inbound firewall rules
+Get-NetFirewallRule -direction Inbound
 
 
 
